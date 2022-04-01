@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #750c0c;
+  padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  background-color: aliceblue;
+  height: 450px;
+  max-width: 800px;
+  border-radius: 0.5em;
+  padding: 1rem;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.instruction {
+  font-size: 0.85rem;
+  width: 75%;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* width: 70%; */
+}
+
+.scores-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rolls-title {
+  font-weight: bold;
+  /* font-size: 1.25rem; */
+}
+
+.rolls-score {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.dice-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dice-div {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 40px;
+  height: 40px;
   color: white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.roll-dice-btn {
+  background-color: #750c0c;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.roll-dice-btn:hover {
+  background-color: black;
 }
